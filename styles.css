@@ -1,0 +1,425 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #74ebd5, #9face6);
+    font-family: 'Arial', sans-serif;
+}
+
+.nama {
+    position: absolute;
+    top: 10px; /* Jarak dari atas */
+    left: 10px; /* Jarak dari kiri */
+    margin: 0; /* Menghapus margin default */
+    padding: 0px 30px; /* Padding lebih proporsional */
+    background-color: #ffffff; /* Warna latar yang lebih bersih */
+    color: green; /* Warna teks lebih tajam */
+    font-family: 'Arial', sans-serif; /* Font yang bersih dan profesional */
+    font-size: 10px; /* Ukuran font yang mudah dibaca */
+    line-height: 1.5; /* Spasi antar baris yang nyaman */
+    border: 2px solid #e0e0e0; /* Batas yang lebih jelas */
+    border-radius: 20px 5px; /* Ujung yang lebih melengkung */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* Shadow yang lebih lembut */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animasi halus */
+}
+
+.nama:hover {
+    transform: translateY(-3px); /* Efek naik saat hover */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25); /* Shadow lebih menonjol */
+}
+
+/* Intro page styling */
+.intro {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, opacity 0.5s;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.intro h1 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #333;
+}
+
+.intro p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* From Uiverse.io by elijahgummer */ 
+.button-with-icon {
+    overflow: hidden;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #0f988e;
+    font-family: "Istok Web", sans-serif;
+    letter-spacing: 1px;
+    padding: 0 12px;
+    text-align: center;
+    width: 120px;
+    height: 40px;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: normal;
+    border-radius: 3px;
+    outline: none;
+    user-select: none;
+    cursor: pointer;
+    transform: translateY(0px);
+    position: relative;
+    box-shadow:
+      inset 0 30px 30px -15px rgba(255, 255, 255, 0.1),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.3),
+      inset 0 1px 20px rgba(0, 0, 0, 0),
+      0 3px 0 #0f988e,
+      0 3px 2px rgba(0, 0, 0, 0.2),
+      0 5px 10px rgba(0, 0, 0, 0.1),
+      0 10px 20px rgba(0, 0, 0, 0.1);
+    background: #15ccbe;
+    color: white;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+    transition: 150ms all ease-in-out;
+  }
+  
+  .button-with-icon .icon {
+    margin-right: 8px;
+    width: 24px;
+    height: 24px;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .button-with-icon:active {
+    transform: translateY(3px);
+    box-shadow:
+      inset 0 16px 2px -15px rgba(0, 0, 0, 0),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.15),
+      inset 0 1px 20px rgba(0, 0, 0, 0.1),
+      0 0 0 #0f988e,
+      0 0 0 2px rgba(255, 255, 255, 0.5),
+      0 0 0 rgba(0, 0, 0, 0),
+      0 0 0 rgba(0, 0, 0, 0);
+  }
+  
+  .button-with-icon:hover .text {
+    transform: translateX(80px);
+  }
+  .button-with-icon:hover .icon {
+    transform: translate(23px);
+  }
+  
+  .text {
+    transition: all 0.5s ease-in-out;
+  }
+  
+
+/* Calculator container */
+.calculator {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    width: 350px;
+    transition: transform 0.3s;
+}
+
+/* Display input field */
+#display {
+    width: 100%;
+    height: 60px;
+    font-size: 32px;
+    text-align: right;
+    margin-bottom: 15px;
+    border: 1px solid #ced4da;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+/* Change background color on focus */
+#display:focus {
+    background-color: #e9ecef;
+}
+
+/* Button grid layout */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+/* Button styling */
+button {
+    padding: 20px;
+    font-size: 24px;
+    border: none;
+    border-radius: 10px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s, box-shadow 0.2s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #0056b3;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Button active effect */
+button:active {
+    transform: scale(0.95);
+}
+
+/* Operator button styling */
+button.operator {
+    background-color: #dc3545; /* Red for operator buttons */
+}
+
+/* Operator button hover effect */
+button.operator:hover {
+    background-color: #c82333; /* Darker red on hover */
+}
+
+/* Zero button styling */
+button.zero {
+    grid-column: span 2; /* Zero button spans two columns */
+}
+
+/* Equal button styling */
+button.equal {
+    background-color: #28a745; /* Green for equal button */
+}
+
+/* Equal button hover effect */
+button.equal:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Additional button styles for aesthetics */
+button:nth-child(3) {
+    background-color: #17a2b8; /* Cyan for division */
+}
+
+button:nth-child(4) {
+    background-color: #17a2b8; /* Cyan for multiplication */
+}
+
+button:nth-child(8) {
+    background-color: #17a2b8; /* Cyan for subtraction */
+}
+
+button:nth-child(12) {
+    background-color: #17a2b8; /* Cyan for addition */
+}
+
+/* Responsive design */
+@media (max-width: 400px) {
+    .calculator {
+        width: 90%;
+    }
+
+    button {
+        font-size: 20px;
+        padding: 15px;
+    }
+
+    #display {
+        font-size: 28px;
+        height: 50px;
+    }
+}
+
+/* Button focus effect */
+button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Ripple effect for buttons */
+button {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Ripple effect */
+button::after {
+    content: '';
+    position: absolute;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    transform: scale(0);
+    animation: ripple 0.6s linear;
+    pointer-events: none;
+}
+
+/* Start button styling */
+.back-button {
+    display: inline-block;
+    margin-top: 250px;
+    margin-left: 50px;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: white;
+    background-color: #007bff;
+    border-radius: 5px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.back-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Ripple animation */
+@keyframes ripple {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+/* Additional styles for the calculator */
+.calculator {
+    transition: transform 0.3s ease;
+}
+
+.calculator:hover {
+    transform: scale(1.02);
+}
+
+/* Social media icons styling */
+.social-media {
+    position: fixed; /* Memastikan posisi tetap di pojok kanan bawah */
+    bottom: 20px; /* Jarak dari bawah */
+    right: 20px; /* Jarak dari kanan */
+    display: flex; /* Menggunakan flexbox untuk tata letak */
+    gap: 15px; /* Jarak antar ikon */
+}
+
+.social-icon {
+    display: flex; /* Menggunakan flexbox untuk ikon */
+    justify-content: center; /* Pusatkan ikon */
+    align-items: center; /* Pusatkan ikon */
+    width: 40px; /* Lebar ikon */
+    height: 40px; /* Tinggi ikon */
+    background-color: rgba(255, 255, 255, 0.8); /* Latar belakang putih transparan */
+    border-radius: 50%; /* Membuat ikon berbentuk lingkaran */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Bayangan halus */
+    color: #007bff; /* Warna ikon */
+    text-decoration: none; /* Menghapus garis bawah pada tautan */
+    transition: background-color 0.3s, transform 0.2s; /* Transisi halus */
+}
+
+.social-icon:hover {
+    background-color: #e9ecef; /* Latar belakang saat hover */
+    transform: scale(1.1); /* Efek zoom saat hover */
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(100%); /* Start from below the screen */
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0); /* End at its original position */
+        opacity: 1;
+    }
+}
+
+/* Apply the animation to the element */
+.calculator {
+    animation: slideUp 0.5s ease-out;
+}
+
+/* From Uiverse.io by EddyBel */ 
+.input__container {
+    position: relative;
+    background: rgba(255, 255, 255, 0.664);
+    padding: 10px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    border-radius: 22px;
+    max-width: 300px;
+    transition: transform 400ms;
+    transform-style: preserve-3d;
+    transform: rotateX(15deg) rotateY(-20deg);
+    perspective: 500px;
+  }
+  
+  .shadow__input {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    filter: blur(30px);
+    border-radius: 20px;
+    background-color: #999cff;
+    background-image: radial-gradient(at 85% 51%, hsla(60,60%,61%,1) 0px, transparent 50%),
+      radial-gradient(at 74% 68%, hsla(235,69%,77%,1) 0px, transparent 50%),
+      radial-gradient(at 64% 79%, hsla(284,72%,73%,1) 0px, transparent 50%),
+      radial-gradient(at 75% 16%, hsla(283,60%,72%,1) 0px, transparent 50%),
+      radial-gradient(at 90% 65%, hsla(153,70%,64%,1) 0px, transparent 50%),
+      radial-gradient(at 91% 83%, hsla(283,74%,69%,1) 0px, transparent 50%),
+      radial-gradient(at 72% 91%, hsla(213,75%,75%,1) 0px, transparent 50%);
+  }
+  
+  .input__button__shadow {
+    cursor: pointer;
+    border: none;
+    background: none;
+    transition: transform 400ms, background 400ms;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    padding: 5px;
+  }
+  
+  .input__button__shadow:hover {
+    background: rgba(255, 255, 255, 0.411);
+  }
+  
+  .input__search {
+    width: 100%;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    padding: 8px;
+    position: relative;
+  }
+
